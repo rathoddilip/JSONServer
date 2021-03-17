@@ -1,0 +1,14 @@
+json-server --watch EmployeeDB.json
+http://localhost:3000/Employee
+getting all json data
+curl -X GET -H "Content-Type: application/json" "http://localhost:3000/Employee"
+
+curl -X GET -H "Content-Type: application/json" "http://localhost:3000/Employee/6"
+
+adding data to json data
+curl -X POST -H "Content-Type: application/json" -d '{"name": "Lisa","salary": "2000"}' "http://localhost:3000/Employee"
+
+update
+curl -X PUT -H "Content-Type: application/json" -d '{"name": "Lisa","salary": "8000"}' "http://localhost:3000/Employee/5"
+
+curl -X DELETE -H "Content-Type: application/json" "http://localhost:3000/Employee/4"
